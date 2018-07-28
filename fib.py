@@ -8,6 +8,18 @@ TOPICS = lists, variables, loops
 '''
 
 def produceFibsList(n):
+    list = [1, 1]
+    if (n > 2):
+        for a in range(1, n-1):
+            list.append(list[a-1] + list[a])
+    elif (n == 0):
+        list = []
+    elif (n == 1): 
+        list = [1]
+    else:
+        list = [1, 1]
+        
+    return list
     '''
     >>> produceFibsList(0)
     []
@@ -21,7 +33,6 @@ def produceFibsList(n):
     [1, 1, 2, 3, 5]
     '''
     # TODO = fill in the code here, and return the correct result using the return keyword
-    pass
 
 if __name__ == '__main__':
     import doctest
